@@ -66,7 +66,37 @@ fetch(url)
         
 // force et direction du vent
         let compass = document.getElementById("compass");
+        let windSpeed = currentWeather.wind_speed_10m
+        let windDirection = currentWeather.wind_direction_10m;
+        let compassArrow = document.createElement("div");
+        let divWindSpeed = document.createElement("div");
+        compassArrow.id = "compassArrow";
+        divWindSpeed.id = "divWindSpeed";
+
+    // direction du vent
+        function rotateArrow(){
+            compassArrow.innerHTML = `<img src="assets/images/compass-arrow.png">`;
+            compassArrow.style.transform = `rotate(${windDirection}deg)`;
+        }
+
+    // vitesse du vent
+        divWindSpeed.innerHTML = windSpeed + " km/heures";
+
+    // fond de la cellule
+        compass.style.background = "url('assets/images/compass.png')";
+        compass.style.backgroundRepeat = "no-repeat";
+        compass.style.backgroundPosition = "center";
+    
+    // affichage de la boussole
+        compass.appendChild(compassArrow);
+        compass.appendChild(divWindSpeed);
+
+        rotateArrow();
+
+        /** 
         compass.innerText = currentWeather.wind_speed_10m + " km/h";
+        **/
+
 
 // météo du jour
         let weatherDay = document.getElementById("weatherDay");
@@ -140,12 +170,6 @@ fetch(url)
             divWeatherByTime[i].appendChild(divTimeByTime[i]);
 
             weatherByTime.appendChild(divWeatherByTime[i]);
-            /** 
-            divWeatherByTime[i].innerHTML = `<img src="assets/images/umbrella.png"> ${timeHumidity[i]}% <br> 
-            <img src = "assets/images/thermometer.png"> ${timeTemperature[i]}° <br> 
-            ${formattedDailyTime[i].replace(":", "h")}`;
-            weatherByTime.appendChild(divWeatherByTime[i]);
-            **/
         };
 
 // météo par jour

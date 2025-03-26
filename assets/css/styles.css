@@ -98,7 +98,8 @@
 
 /****** block boussole ******/
 
-.compass { 
+.compass {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.3);
     display:flex;
     justify-content: center;
@@ -109,6 +110,10 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#divWindSpeed{
+    position:absolute;
+    bottom:0;
+}
 /****** block temps par heure ******/
 
 .weatherByTime { 
