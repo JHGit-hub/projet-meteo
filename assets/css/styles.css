@@ -12,7 +12,41 @@
     src: url(../fonts/Roboto-Regular.ttf);
 }
 
+/****** media queries *****/
 
+
+@media (max-width: 720px) {
+    .container {
+        height: auto!important;
+        display: grid !important;
+        grid-template-columns: 48% 48% !important;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-areas:
+            "date night"
+            "weatherDay weatherDay"
+            "compass compass"
+            "weatherByTime weatherByTime"
+            "day0 day1"
+            "day2 day3" !important;
+    }
+    .date-style{
+        font-size: 2rem!important;
+    }
+    .time-style{
+        font-size: 1rem!important;
+    }
+    .weatherDay{
+        font-size: 1rem !important;
+    }
+    .temp-style{
+        font-size: 2rem !important;
+    }
+}
+   
+
+
+
+/****** container ******/
 
 .container {
     height:100vh;
@@ -100,7 +134,6 @@
 
 .compass {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
     display:flex;
     justify-content: center;
     align-items: center;
