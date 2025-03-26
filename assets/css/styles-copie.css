@@ -1,0 +1,252 @@
+/* ========== BASE ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    max-height: 100vh;
+    margin: 0;
+    color: black;
+    overflow-x: hidden;
+  }
+  
+  
+.app-container {
+    margin: 0.5rem;
+}
+
+/* ========== BARRE DE RECHERCHE ========== */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: black;
+}
+
+input:hover {
+    padding: 10px 1.3rem;
+    transition: 0.2s ease-in-out;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #009fe3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1900ff;
+    padding: 0 1.3rem;
+    transition: 0.2s ease-in-out;
+}
+
+/* ========== GRILLE PRINCIPALE ========== */
+.weather-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.box-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* ========== DATE ET HEURE ========== */
+.date-box {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* ========== ICÔNES JOUR/NUIT ========== */
+.sky-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sky-box {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: rgb(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sky-box img {
+    height: 30px;
+}
+
+.sky-box.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sky-box.inactive {
+    filter: grayscale(100%) blur(1px);
+    opacity: 0.5;
+}
+
+/* ========== TEMPÉRATURE ACTUELLE ========== */
+.current-box .temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.current-box img {
+    max-width: 200px;
+}
+
+/* ========== BOUSSOLE ========== */
+.compass-box {
+    position: relative;
+}
+
+.cadran {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.aiguille {
+    position: absolute;
+    top: 18%;
+    left: 47%;
+}
+
+#wind {
+    padding-top: 20rem;
+    font-weight: bold;
+}
+
+/* ========== PRÉVISIONS JOURNALIÈRES ========== */
+.forecast-daily {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.forecast-daily .day {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 120px;
+    text-align: center;
+}
+
+  /* ========== PRÉVISIONS HORAIRES ========== */
+
+.forecast-hourly {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+.forecast-hourly::-webkit-scrollbar {
+    width: 15px;
+}
+
+.forecast-hourly::-webkit-scrollbar-track {
+    background: none;
+}
+
+.forecast-hourly::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0077ff, #0084ff);
+    border-radius: 10px;
+}
+  
+.hour-card {
+    flex: 0 0 auto;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    scroll-snap-align: start;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+  
+.hour-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+    
+  /* ========== PRÉVISIONS JOURNALIERES ========== */
+
+.forecast-daily {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .day-card {
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+  
+  .day-card img {
+    width: 80px;
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  .day-card p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+  }
+  
