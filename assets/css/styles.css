@@ -25,9 +25,9 @@
 .weatherDay {
     background-color: rgba(255, 255, 255, 0.3);
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-    gap:2rem;
+    gap:1rem;
     align-items: center;
     grid-area: weatherDay;
     border:solid 1px #333;
@@ -35,6 +35,9 @@
     font-size: 2rem;
     font-weight: 700;
     color: #343553;
+}
+.weatherDay img{
+    width:30%;
 }
 
 .temp-style{
@@ -76,6 +79,9 @@
     border:solid 1px #333;
     border-radius: 20px;
 }
+.night img{
+    width:70%;
+}
 
 /****** block boussole ******/
 
@@ -93,14 +99,18 @@
 
 .weatherByTime { 
     background-color: rgba(255, 255, 255, 0.3);
-    display:flex;
+    display:grid;
     justify-content: center;
+    overflow-x: auto;
     gap: 1rem;
     align-items: center;
     grid-area: weatherByTime;
     border:solid 1px #333;
     border-radius: 20px;
+    grid-auto-flow: column;
+    padding-left: 170px;
 }
+
 #divWeatherByTime{
     text-align: center;
     display:flex;
@@ -113,7 +123,18 @@
     height:100%;
     color: #343553;
     font-weight: 700;
+    width:200px;
 }
+
+#divHumidityByTime, #divTemperatureByTime, #divTimeByTime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+
 
 /****** block temps par jour ******/
 

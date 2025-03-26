@@ -100,6 +100,9 @@ fetch(url)
         let timeTemperature = [];
         let time = [];
         let divWeatherByTime = [];
+        let divHumidityByTime = [];
+        let divTemperatureByTime = [];
+        let divTimeByTime = [];
         let timeDailyFormat = [];
         let dayTime = [];
         let formattedDailyTime = [];
@@ -112,7 +115,15 @@ fetch(url)
 
         for(i=0; i<dayTime.length; i++){
             divWeatherByTime[i] = document.createElement("div");
+            divHumidityByTime[i] = document.createElement("div");
+            divTemperatureByTime[i] = document.createElement("div");
+            divTimeByTime[i] = document.createElement("div");
+
             divWeatherByTime[i].id = "divWeatherByTime";
+            divHumidityByTime[i].id = "divHumidityByTime";
+            divTemperatureByTime[i].id = "divTemperatureByTime";
+            divTimeByTime[i].id = "divTimeByTime";
+
 
             timeDailyFormat[i] = new Date(dayTime[i]);
             formattedDailyTime[i] = timeDailyFormat[i].toLocaleTimeString("fr-FR",{
@@ -120,10 +131,21 @@ fetch(url)
                 minute: "2-digit",
             });
 
+            divHumidityByTime[i].innerHTML = `<img src="assets/images/umbrella.png"> ${timeHumidity[i]}%`;
+            divTemperatureByTime[i].innerHTML = `<img src = "assets/images/thermometer.png"> ${timeTemperature[i]}°`;
+            divTimeByTime[i].innerHTML = `${formattedDailyTime[i].replace(":", "h")}`;
+
+            divWeatherByTime[i].appendChild(divHumidityByTime[i]);
+            divWeatherByTime[i].appendChild(divTemperatureByTime[i]);
+            divWeatherByTime[i].appendChild(divTimeByTime[i]);
+
+            weatherByTime.appendChild(divWeatherByTime[i]);
+            /** 
             divWeatherByTime[i].innerHTML = `<img src="assets/images/umbrella.png"> ${timeHumidity[i]}% <br> 
             <img src = "assets/images/thermometer.png"> ${timeTemperature[i]}° <br> 
             ${formattedDailyTime[i].replace(":", "h")}`;
             weatherByTime.appendChild(divWeatherByTime[i]);
+            **/
         };
 
 // météo par jour
