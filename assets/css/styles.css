@@ -2,7 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "roboto";
 }
+
+/****** fonts ******/
+
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
 
 .container {
     height:100vh;
@@ -30,11 +40,12 @@
     gap:1rem;
     align-items: center;
     grid-area: weatherDay;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 700;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .weatherDay img{
     width:30%;
@@ -53,8 +64,9 @@
     justify-content: center;
     align-items: center;
     grid-area: date;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .date-style{
@@ -76,8 +88,9 @@
     justify-content: center;
     align-items: center;
     grid-area: night;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .night img{
     width:70%;
@@ -91,8 +104,9 @@
     justify-content: center;
     align-items: center;
     grid-area: compass;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /****** block temps par heure ******/
@@ -105,10 +119,11 @@
     gap: 1rem;
     align-items: center;
     grid-area: weatherByTime;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     grid-auto-flow: column;
     padding-left: 170px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #divWeatherByTime{
@@ -146,10 +161,11 @@
     justify-content: center;
     align-items: center;
     grid-area: day0;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     gap:0.5rem;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day0 img{
     width:70%;
@@ -164,9 +180,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day1;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day1 img{
     width:70%;
@@ -181,9 +198,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day3;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day3 img{
     width:70%;
@@ -198,9 +216,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day5;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day5 img{
     width:70%;
@@ -215,9 +234,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day6;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day6 img{
     width:70%;
@@ -232,9 +252,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day2;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day2 img{
     width:70%;
@@ -249,9 +270,10 @@
     justify-content: center;
     align-items: center;
     grid-area: day4;
-    border:solid 1px #333;
+    border:solid 1px #343553;
     border-radius: 20px;
     color: #343553;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .day4 img{
     width:70%;
