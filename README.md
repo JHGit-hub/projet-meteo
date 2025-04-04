@@ -22,7 +22,7 @@ https://open-meteo.com/
 
 ## Author
 
-👤 **Julien**
+👤 **Julien - Promo 2025**
 
 * Github: [@JHGit-hub](https://github.com/JHGit-hub)
 

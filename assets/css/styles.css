@@ -126,7 +126,6 @@
     align-items: center;
     grid-area: weatherByTime;
     border:solid 1px #343553;
-    border-radius: 20px;
     grid-auto-flow: column;
     padding-left: 170px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
